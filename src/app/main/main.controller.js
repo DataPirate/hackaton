@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($timeout, webDevTec, toastr, $scope) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -34,6 +34,14 @@
       angular.forEach(vm.awesomeThings, function(awesomeThing) {
         awesomeThing.rank = Math.random();
       });
+    }
+
+    $scope.onUpVote = function() {
+      console.log('up');
+    }
+
+    $scope.onDownVote = function() {
+      console.log('down');
     }
   }
 })();
