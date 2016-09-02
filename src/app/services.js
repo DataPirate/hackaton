@@ -10,8 +10,9 @@
     var service = {};
 
     service.registerVote = function(vote) {
-      Restangular.one('/votes').post({vote:vote});
-    }
+      var baseVotes = Restangular.all('votes');
+      baseVotes.post({vote:vote});
+    };
 
     return service;
   }

@@ -16,7 +16,7 @@
     toastr.options.preventDuplicates = true;
     toastr.options.progressBar = true;
 
-    RestangularProvider.setBaseUrl('http://127.0.0.1:27017/hack');
+    RestangularProvider.setBaseUrl('http://127.0.0.1:8080/hack');
 
   }
 
