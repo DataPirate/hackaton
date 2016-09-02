@@ -6,7 +6,7 @@
     .config(config);
 
   /** @ngInject */
-  function config($logProvider, toastr) {
+  function config($logProvider, toastr, RestangularProvider) {
     // Enable log
     $logProvider.debugEnabled(true);
 
@@ -15,6 +15,9 @@
     toastr.options.positionClass = 'toast-top-right';
     toastr.options.preventDuplicates = true;
     toastr.options.progressBar = true;
+
+    RestangularProvider.setBaseUrl('http://127.0.0.1:27017/hack');
+
   }
 
 })();

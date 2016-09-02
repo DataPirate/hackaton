@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr, $scope) {
+  function MainController($timeout, webDevTec, toastr, $scope, Service) {
     var vm = this;
 
     vm.awesomeThings = [];
@@ -38,10 +38,12 @@
 
     $scope.onUpVote = function() {
       console.log('up');
+      Service.registerVote('up');
     }
 
     $scope.onDownVote = function() {
       console.log('down');
+      Service.registerVote('down');
     }
   }
 })();
