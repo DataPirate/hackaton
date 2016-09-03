@@ -20,6 +20,12 @@
         controller: 'DashboardController',
         controllerAs: 'main'
       })
+      .state('settings', {
+        url: '/settings',
+        templateUrl: 'app/settings/settings.html',
+        controller: 'SettingsController',
+        controllerAs: 'settings'
+      })
     ;
 
     $urlRouterProvider.otherwise('/');
