@@ -6,11 +6,11 @@
       <div class="col-sm-12">
         <div>
           <div ng-repeat="vibe in vibes">
-            {{vibe[0].name}}
-            <a ng-repeat="point in vibe">
-              <img src="assets/images/sad.svg" ng-if="point.vote == 'down'" height="75" width="75">
-              <img src="assets/images/happy.svg" ng-if="point.vote == 'up'" height="75" width="75">
-            </a>
+            <h2>{{vibe[0].name}}</h2>
+            <b ng-repeat="point in vibe">
+              <img popover="{{point.question}}" popover-title="Question" src="assets/images/sad.svg" ng-if="point.vote == 'down'" height="75" width="75">
+              <img popover="{{point.question}}" popover-title="Question" src="assets/images/happy.svg" ng-if="point.vote == 'up'" height="75" width="75">
+            </b>
           </div>
         </div>
       </div>

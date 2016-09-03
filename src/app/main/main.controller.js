@@ -14,13 +14,13 @@
 
     $scope.onUpVote = function() {
       console.log('up');
-      Service.registerVote('up', $scope.name, $scope.currentQuestion);
+      Service.registerVote('up', $scope.name, $scope.questions[$scope.currentQuestion]);
       $scope.currentQuestion++;
     };
 
     $scope.onDownVote = function() {
       console.log('down');
-      Service.registerVote('down', $scope.name, $scope.currentQuestion);
+      Service.registerVote('down', $scope.name, $scope.questions[$scope.currentQuestion]);
       $scope.currentQuestion++;
     };
   }

@@ -63,7 +63,7 @@
       return transformed;
     };
 
-    $interval(_load , 1000);
+    _load();
 
   }
 })();
