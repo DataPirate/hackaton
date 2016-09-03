@@ -1,15 +1,18 @@
 <div class="container">
   <div class="jumbotron text-center">
-    <h1>How are you?</h1>
 
     <div class="row">
       <div class="col-sm-4">
 
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4" ng-if="currentQuestion < questions.length">
         <img src="assets/images/happy.svg" width="200" height="200" ng-click="onUpVote()" /><br>
-        <p> How do you feel? </p>
+        <h2>{{questions[currentQuestion]}}</h2>
         <img src="assets/images/sad.svg" width="200" height="200" ng-click="onDownVote()" /><br>
+      </div>
+
+      <div class="col-sm-4" ng-if="currentQuestion == questions.length">
+        <h2>Thank you for your feedback!</h2>
       </div>
 
     </div>
