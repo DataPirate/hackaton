@@ -8,7 +8,7 @@
   /** @ngInject */
   function MainController(toastr, $scope, Service) {
 
-    $scope.name = '';
+    $scope.name = 'Piotr';
     $scope.questions = ['How do you feel?', 'How does your back feel?', 'How do your hands feel?']
     $scope.currentQuestion = 0;
 

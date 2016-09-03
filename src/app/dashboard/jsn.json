@@ -1,0 +1,32 @@
+{
+  "_id": "votes",
+  "_returned": 2,
+  "_embedded": {
+    "rh:doc": [
+      {
+        "_id": {
+          "$oid": "57caa10b47e5bb5f6a122d3c"
+        },
+        "_etag": {
+          "$oid": "57caa10b6f15d33daa73d802"
+        },
+        "vote": "up",
+        "name": "Piotr",
+        "questionIndex": 2,
+        "submitted_at": "2016-09-03T10:08:11.399Z"
+      },
+      {
+        "_id": {
+          "$oid": "57caa10547e5bb5f6a122d3b"
+        },
+        "_etag": {
+          "$oid": "57caa1056f15d33daa73d801"
+        },
+        "vote": "up",
+        "name": "Piotr",
+        "questionIndex": 1,
+        "submitted_at": "2016-09-03T10:08:05.489Z"
+      }
+    ]
+  }
+}

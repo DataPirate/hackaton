@@ -8,6 +8,15 @@
       </div>
       <div class="col-sm-4">
         <input type="button" ng-click="load()" value="Load feedback">
+        <div>
+          <div ng-repeat="vibe in vibes">
+            {{vibe[0].name}}
+            <a ng-repeat="point in vibe">
+              <img src="assets/images/sad.svg" ng-if="point.vote == 'down'" height="75" width="75">
+              <img src="assets/images/happy.svg" ng-if="point.vote == 'up'" height="75" width="75">
+            </a>
+          </div>
+        </div>
       </div>
 
     </div>

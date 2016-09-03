@@ -16,7 +16,7 @@
     };
 
     service.getVotes = function() {
-      return baseVotes.get();
+      return baseVotes.customGET("");
     };
 
     return service;
