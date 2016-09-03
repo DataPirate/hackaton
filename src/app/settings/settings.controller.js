@@ -13,6 +13,7 @@
 
     $scope.saveSettings = function() {
       Service.setName($scope.name);
+      toastr.success("Settings saved");
       $state.go('home');
     };
   }
