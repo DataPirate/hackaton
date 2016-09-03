@@ -9,7 +9,7 @@
     .controller('DashboardController', DashboardController);
 
   /** @ngInject */
-  function DashboardController(toastr, $scope, Service) {
+  function DashboardController(toastr, $scope, Service, $interval) {
 
     $scope.vibes = [
       [{
@@ -39,10 +39,9 @@
       ]
     ];
 
-    $scope.load = function () {
+    var _load = function () {
       Service.getVotes().then(function (data) {
         data = data['_embedded']['rh:doc'];
-        toastr.success("success");
         $scope.vibes = tranformVibes(data);
       });
     };
@@ -62,7 +61,9 @@
         transformed[ind].push(vibe);
       });
       return transformed;
-    }
+    };
+
+    $interval(_load , 1000);
 
   }
 })();
