@@ -9,6 +9,7 @@
   function Service(Restangular) {
     var service = {};
     var baseVotes = Restangular.all('votes');
+    var _name = 'Piotr';
 
     service.registerVote = function(vote, name, question) {
       var currentTime = new Date();
@@ -17,6 +18,14 @@
 
     service.getVotes = function() {
       return baseVotes.customGET("");
+    };
+
+    service.setName = function (name) {
+      _name = name;
+    };
+
+    service.getName = function () {
+      return _name;
     };
 
     return service;
